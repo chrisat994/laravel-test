@@ -12,7 +12,7 @@
   - 1.Close the repository.
   - 2.Create database test_app_db.
   - 3.Create .env file and copy all data from .env.example.
-  - 4.Run Composer Update.
+  - 4.Run composer install.
   - 5.Run php artisan migrate to create tables.
   
 
