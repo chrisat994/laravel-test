@@ -9,11 +9,11 @@
 
 ## Installation Instructions
 
-  1.Close the repository.
-  2.Create database test_app_db.
-  3.Create .env file and copy all data from .env.example.
-  4.Run Composer Update.
-  5.Run php artisan migrate to create tables.
+  - 1.Close the repository.
+  - 2.Create database test_app_db.
+  - 3.Create .env file and copy all data from .env.example.
+  - 4.Run Composer Update.
+  - 5.Run php artisan migrate to create tables.
   
 
 
