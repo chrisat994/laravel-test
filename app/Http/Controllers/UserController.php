@@ -51,19 +51,17 @@ class UserController extends Controller
         $validatedData = $request->validate([
             'firstName' => 'required',
             'lastName' => 'required',
-            'email' => 'required|email',
+            'email' => 'required|email|unique:users,email,' . $id
+
 
 
 
 
         ]);
-        $mailCheck = User::where('email', $request->email)->get();
+        
 
         $user = User::find($id);
-        if (count($mailCheck) >= 1 && $user->email  != $mailCheck[0]->email) {
-            // $fail('');
-            return back()->with('error', $request->email.' is already Added!!');
-        }
+       
 
         // return view('user.edit')->with('user', $user);
         $user = User::find($id);

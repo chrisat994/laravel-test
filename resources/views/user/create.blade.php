@@ -5,6 +5,10 @@
 
 @section('mainContent')
 <div class="mt-4">
+<div class="mt2 mb-3">
+        <a href="/" class="btn btn btn-outline-secondary">
+            < back</a>
+    </div>
     <form action="/createUser" method="POST" >
         @csrf
         <div class="mb-3">

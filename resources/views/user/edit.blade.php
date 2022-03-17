@@ -10,6 +10,10 @@
         {{ session('error') }}
     </div>
     @endif
+    <div class="mt2 mb-3">
+        <a href="/" class="btn btn btn-outline-secondary">
+            < back</a>
+    </div>
     <form action="/updateUser/{{$user->id}}" method="POST">
         <input type="hidden" name="_method" value="PUT">
         @csrf
@@ -38,6 +42,7 @@
         </div>
 
         <button type="submit" class="btn btn-primary">Submit</button>
+
     </form>
 </div>
 
