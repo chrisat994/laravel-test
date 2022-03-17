@@ -14,10 +14,14 @@
     {{ session('error') }}
 </div>
 @endif
+@if($userList->isNotEmpty())
 <div class="mt-3 mb-2 d-flex align-items-end flex-column">
     <a href="{{ url('/new-user') }}" class="btn btn-success btn-sm">+ New User</a>
 </div>
+@endif
+
 <div class="mt-4">
+    @if($userList->isNotEmpty())
     <table class="table">
         <thead>
             <tr>
@@ -37,6 +41,15 @@
 
         </tbody>
     </table>
+    @else
+    <div class="mt-3 mb-2 d-flex align-items-center flex-column">
+        <h3>No Users Found!!</h3>
+        <div class="mt-3 mb-2 d-flex align-items-end flex-column">
+            <a href="{{ url('/new-user') }}" class="btn btn-success btn-sm">+ Add User</a>
+        </div>
+    </div>
+    @endif
 </div>
+
 
 @endsection
